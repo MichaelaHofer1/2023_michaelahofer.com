@@ -21,8 +21,11 @@ const js_tasks = [
 for (const task of css_tasks) {
     mix.sass(task.file, task.dest).sourceMaps();
 }
+/*
 for (const task of js_tasks) {
     mix.js(task.file, task.dest).sourceMaps();
 }
+
+ */
 
 mix.setPublicPath('themes/dist').options({processCssUrls: false});

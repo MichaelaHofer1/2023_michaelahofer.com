@@ -5,3 +5,17 @@
   height: 100%;
 }
 
+@mixin topBottomRightLeft($top, $bottom, $left, $right) {
+  top: $top;
+  bottom: $bottom;
+  left: $left;
+  right: $right;
+}
+
+@mixin headline($font-size, $color){
+  font-size: $font-size;
+  color: $color;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-weight: 100;
+}

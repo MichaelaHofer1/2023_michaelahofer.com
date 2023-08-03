@@ -54,7 +54,7 @@ a {
   text-decoration: none;
   transition: color 150ms linear;
   &:hover  {
-    color: $contrast-color;
+    color: $third-color;
   }
   &:active {
     color: $third-color;

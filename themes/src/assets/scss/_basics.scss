@@ -15,7 +15,7 @@ html {
 body {
   margin: 0;
   padding-top: $navbar-height-mobile;
-  font-family: 'Inter Tight';
+  font-family: 'Inter Tight', sans-serif;
   min-height: 100vh;
 
   @media (min-width: $desktop-breakpoint) {

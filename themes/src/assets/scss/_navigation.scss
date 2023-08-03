@@ -214,16 +214,15 @@
 #brand {
   height: calc($navbar-height-mobile / 1.5);
   width: calc($navbar-height-mobile / 1.5);
-  img {
-    height: 100%;
-    filter: invert(100%);
-  }
   @media (min-width: $desktop-breakpoint) {
     height: calc($navbar-height-mobile / 1.1);
     width: calc($navbar-height-mobile / 1.1);
   }
+  img {
+    height: 100%;
+    filter: invert(100%);
+  }
 }
-
 
 #nav-bar {
   position: fixed;
@@ -236,6 +235,9 @@
     justify-content: space-between;
     align-items: center;
     height: $navbar-height-mobile;
+    @media screen and (min-width: $desktop-breakpoint) {
+      height: $navbar-height-desktop;
+    }
   }
 }
 
@@ -254,23 +256,71 @@
   @media screen and (orientation:landscape) {
     padding: 0;
   }
+  @media screen and (min-width: $desktop-breakpoint) {
+    position: static;
+    flex-direction: row;
+    opacity: 1;
+    overflow-y: visible;
+    padding: 0;
+    background-color: transparent;
+  }
   a {
-    padding: .3em 4em;
+    padding: .3em 1em;
+    position: relative;
+    @include dynamicUnderline(0);
+    @media screen and (min-width: $desktop-breakpoint) {
+      padding: 38px .7em;
+      margin: 0 .6em;
+    }
+    &:hover {
+      &::before,
+      &::after {
+        width: 50%;
+      }
+    }
   }
   > li > a {
     @include headline(1.5em, white);
     line-height: 2.5em;
+    @media screen and (min-width: $desktop-breakpoint) {
+      @include headline(1.3em, white);
+    }
   }
+  li {
+    position: relative;
+  }
+
   .sub-menu a {
     @include headline(1em, white);
     line-height: 2em;
-    text-transform: lowercase;
+    text-transform: capitalize;
+    @media screen and (min-width: $desktop-breakpoint) {
+      color: blue;
+    }
   }
   .sub-menu {
     transform: translateY(-.5em);
+    @media screen and (min-width: $desktop-breakpoint) {
+      display: block;
+      background-color: black;
+      position: absolute;
+      left: 50%;
+      top: 100px;
+      transform: translate(-50%);
+    }
   }
-}
 
+  .current-menu-item,
+  .current-menu-parent,
+  .current_page_parent {
+    position: relative;
+    > a {
+      @include dynamicUnderline(50%);
+    }
+  }
+
+
+}
 
 
 

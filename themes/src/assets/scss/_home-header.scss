@@ -1,0 +1,87 @@
+@use "./variables" as *;
+@use "./mixins" as *;
+
+header {
+  height: calc(100vh - $navbar-height-mobile);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  @media screen and (min-width: $desktop-breakpoint) {
+    flex-direction: row;
+    height: calc(100vh - $navbar-height-desktop);
+  }
+}
+
+#title-container {
+  background-color: $contrast-color;
+  height: 50vh;
+  width: 100%;
+  @media screen and (min-width: $desktop-breakpoint) {
+    height: 100%;
+    width: 0;
+  }
+}
+
+#title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -60%);
+  background-color: white;
+  padding: 2.5em 1.5em;
+  text-align: center;
+  border: 1px solid #e4e4e4;
+  max-width: 500px;
+  @media screen and (min-width: $small-tablet-breakpoint) {
+    padding: 3em 2.5em;
+  }
+  @media screen and (min-width: $desktop-breakpoint) {
+    top: 50%;
+    left: 50%;
+  }
+  h1 {
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 7px;
+    @media screen and (min-width: $small-tablet-breakpoint){
+      font-size: 2.3em;
+      letter-spacing: 15px;
+    }
+    .profession {
+      font-size: 1.5rem;
+      text-transform: none;
+      letter-spacing: 1px;
+      display: block;
+      padding-top: .5em;
+      @media screen and (min-width: $small-tablet-breakpoint) {
+        font-size: 1.8rem;
+        padding-top: 1em;
+      }
+    }
+  }
+}
+
+
+#header-slider {
+  height: 50vh;
+  width: 100%;
+  max-width: 2000px;
+  margin: 0 auto;
+  @media screen and (min-width: $desktop-breakpoint) {
+    height: 100%;
+    width: 100%;
+  }
+  ul {
+    margin: 0;
+  }
+  img {
+    object-fit: cover;
+    width: 100%;
+    height: 50vh;
+    @media screen and (min-width: $desktop-breakpoint) {
+      height: calc(100vh - 100px);
+    }
+  }
+}
+

@@ -43,6 +43,7 @@
   flex-direction: column;
   text-align: center;
   opacity: 0;
+  pointer-events: none;
   transition: opacity 150ms ease-in;
   overflow-y: auto;
   @media screen and (orientation:landscape) {
@@ -52,6 +53,7 @@
     position: static;
     flex-direction: row;
     opacity: 1;
+    pointer-events: all;
     overflow-y: visible;
     padding: 0;
     background-color: transparent;

@@ -7,8 +7,17 @@
  * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
  */
 /******/ (() => { // webpackBootstrap
-/******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
+
+/***/ "./themes/src/assets/js/scripts.js":
+/*!*****************************************!*\
+  !*** ./themes/src/assets/js/scripts.js ***!
+  \*****************************************/
+/***/ (() => {
+
+eval("function jsLoaded() {\n  var htmlTag = document.querySelector('html');\n  htmlTag.classList.remove('no-js');\n  htmlTag.classList.add('js');\n}\ndocument.addEventListener('DOMContentLoaded', function () {\n  var sliderInitalizeSlideshow = function sliderInitalizeSlideshow() {\n    var splide = new Splide('#header-slider', {\n      type: 'loop',\n      easing: 'ease',\n      autoplay: true,\n      perPage: 1,\n      interval: 3000,\n      speed: 750,\n      pagination: false,\n      arrows: false\n    });\n    splide.mount();\n  };\n  if (window.acf) {\n    window.acf.addAction('render_block_preview/type=header', sliderInitalizeSlideshow);\n  }\n});\n\n// Event Listener \"DOMContentLoaded\" wird nur ausgeführt, wenn der DOM fertig aufgebaut ist\ndocument.addEventListener('DOMContentLoaded', function () {\n  jsLoaded();\n}, false);//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJqc0xvYWRlZCIsImh0bWxUYWciLCJkb2N1bWVudCIsInF1ZXJ5U2VsZWN0b3IiLCJjbGFzc0xpc3QiLCJyZW1vdmUiLCJhZGQiLCJhZGRFdmVudExpc3RlbmVyIiwic2xpZGVySW5pdGFsaXplU2xpZGVzaG93Iiwic3BsaWRlIiwiU3BsaWRlIiwidHlwZSIsImVhc2luZyIsImF1dG9wbGF5IiwicGVyUGFnZSIsImludGVydmFsIiwic3BlZWQiLCJwYWdpbmF0aW9uIiwiYXJyb3dzIiwibW91bnQiLCJ3aW5kb3ciLCJhY2YiLCJhZGRBY3Rpb24iXSwic291cmNlcyI6WyJ3ZWJwYWNrOi8vMjAyM19taWNoYWVsYWhvZmVyLy4vdGhlbWVzL3NyYy9hc3NldHMvanMvc2NyaXB0cy5qcz84NDg3Il0sInNvdXJjZXNDb250ZW50IjpbImZ1bmN0aW9uIGpzTG9hZGVkKCkge1xyXG4gICAgY29uc3QgaHRtbFRhZyA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoJ2h0bWwnKVxyXG4gICAgaHRtbFRhZy5jbGFzc0xpc3QucmVtb3ZlKCduby1qcycpXHJcbiAgICBodG1sVGFnLmNsYXNzTGlzdC5hZGQoJ2pzJylcclxufVxyXG5cclxuXHJcbmRvY3VtZW50LmFkZEV2ZW50TGlzdGVuZXIoJ0RPTUNvbnRlbnRMb2FkZWQnLCBmdW5jdGlvbiAoKSB7XHJcbiAgICBjb25zdCBzbGlkZXJJbml0YWxpemVTbGlkZXNob3cgPSBmdW5jdGlvbiAoKSB7XHJcbiAgICAgICAgbGV0IHNwbGlkZSA9IG5ldyBTcGxpZGUoJyNoZWFkZXItc2xpZGVyJywge1xyXG4gICAgICAgICAgICB0eXBlOiAnbG9vcCcsXHJcbiAgICAgICAgICAgIGVhc2luZzogJ2Vhc2UnLFxyXG4gICAgICAgICAgICBhdXRvcGxheTogdHJ1ZSxcclxuICAgICAgICAgICAgcGVyUGFnZTogMSxcclxuICAgICAgICAgICAgaW50ZXJ2YWw6IDMwMDAsXHJcbiAgICAgICAgICAgIHNwZWVkOiA3NTAsXHJcbiAgICAgICAgICAgIHBhZ2luYXRpb246IGZhbHNlLFxyXG4gICAgICAgICAgICBhcnJvd3M6IGZhbHNlXHJcbiAgICAgICAgfSk7XHJcbiAgICAgICAgc3BsaWRlLm1vdW50KCk7XHJcbiAgICB9O1xyXG5cclxuICAgIGlmICh3aW5kb3cuYWNmKSB7XHJcbiAgICAgICAgd2luZG93LmFjZi5hZGRBY3Rpb24oJ3JlbmRlcl9ibG9ja19wcmV2aWV3L3R5cGU9aGVhZGVyJywgc2xpZGVySW5pdGFsaXplU2xpZGVzaG93KVxyXG4gICAgfVxyXG5cclxufSk7XHJcblxyXG5cclxuLy8gRXZlbnQgTGlzdGVuZXIgXCJET01Db250ZW50TG9hZGVkXCIgd2lyZCBudXIgYXVzZ2Vmw7xocnQsIHdlbm4gZGVyIERPTSBmZXJ0aWcgYXVmZ2ViYXV0IGlzdFxyXG5kb2N1bWVudC5hZGRFdmVudExpc3RlbmVyKCdET01Db250ZW50TG9hZGVkJywgZnVuY3Rpb24gKCkge1xyXG4gICAganNMb2FkZWQoKVxyXG59LCBmYWxzZSlcclxuIl0sIm1hcHBpbmdzIjoiQUFBQSxTQUFTQSxRQUFRQSxDQUFBLEVBQUc7RUFDaEIsSUFBTUMsT0FBTyxHQUFHQyxRQUFRLENBQUNDLGFBQWEsQ0FBQyxNQUFNLENBQUM7RUFDOUNGLE9BQU8sQ0FBQ0csU0FBUyxDQUFDQyxNQUFNLENBQUMsT0FBTyxDQUFDO0VBQ2pDSixPQUFPLENBQUNHLFNBQVMsQ0FBQ0UsR0FBRyxDQUFDLElBQUksQ0FBQztBQUMvQjtBQUdBSixRQUFRLENBQUNLLGdCQUFnQixDQUFDLGtCQUFrQixFQUFFLFlBQVk7RUFDdEQsSUFBTUMsd0JBQXdCLEdBQUcsU0FBM0JBLHdCQUF3QkEsQ0FBQSxFQUFlO0lBQ3pDLElBQUlDLE1BQU0sR0FBRyxJQUFJQyxNQUFNLENBQUMsZ0JBQWdCLEVBQUU7TUFDdENDLElBQUksRUFBRSxNQUFNO01BQ1pDLE1BQU0sRUFBRSxNQUFNO01BQ2RDLFFBQVEsRUFBRSxJQUFJO01BQ2RDLE9BQU8sRUFBRSxDQUFDO01BQ1ZDLFFBQVEsRUFBRSxJQUFJO01BQ2RDLEtBQUssRUFBRSxHQUFHO01BQ1ZDLFVBQVUsRUFBRSxLQUFLO01BQ2pCQyxNQUFNLEVBQUU7SUFDWixDQUFDLENBQUM7SUFDRlQsTUFBTSxDQUFDVSxLQUFLLENBQUMsQ0FBQztFQUNsQixDQUFDO0VBRUQsSUFBSUMsTUFBTSxDQUFDQyxHQUFHLEVBQUU7SUFDWkQsTUFBTSxDQUFDQyxHQUFHLENBQUNDLFNBQVMsQ0FBQyxrQ0FBa0MsRUFBRWQsd0JBQXdCLENBQUM7RUFDdEY7QUFFSixDQUFDLENBQUM7O0FBR0Y7QUFDQU4sUUFBUSxDQUFDSyxnQkFBZ0IsQ0FBQyxrQkFBa0IsRUFBRSxZQUFZO0VBQ3REUCxRQUFRLENBQUMsQ0FBQztBQUNkLENBQUMsRUFBRSxLQUFLLENBQUMiLCJmaWxlIjoiLi90aGVtZXMvc3JjL2Fzc2V0cy9qcy9zY3JpcHRzLmpzIiwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./themes/src/assets/js/scripts.js\n");
+
+/***/ }),
 
 /***/ "./themes/src/assets/scss/style.scss":
 /*!*******************************************!*\
@@ -16,6 +25,7 @@
   \*******************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi90aGVtZXMvc3JjL2Fzc2V0cy9zY3NzL3N0eWxlLnNjc3MiLCJtYXBwaW5ncyI6IjtBQUFBIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vMjAyM19taWNoYWVsYWhvZmVyLy4vdGhlbWVzL3NyYy9hc3NldHMvc2Nzcy9zdHlsZS5zY3NzPzA5ZmEiXSwic291cmNlc0NvbnRlbnQiOlsiLy8gZXh0cmFjdGVkIGJ5IG1pbmktY3NzLWV4dHJhY3QtcGx1Z2luXG5leHBvcnQge307Il0sIm5hbWVzIjpbXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./themes/src/assets/scss/style.scss\n");
 
 /***/ })
@@ -157,6 +167,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
+/******/ 	__webpack_require__.O(undefined, ["style"], () => (__webpack_require__("./themes/src/assets/js/scripts.js")))
 /******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["style"], () => (__webpack_require__("./themes/src/assets/scss/style.scss")))
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	

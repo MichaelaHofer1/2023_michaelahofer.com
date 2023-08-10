@@ -7,7 +7,7 @@ if (!empty($block['anchor'])) {
 
 $class_name = '';
 
-if (!empty($block['clasName'])) {
+if (!empty($block['className'])) {
 	$class_name = 'class="' . esc_attr($block['className']) . '"';
 }
 ?>
@@ -18,26 +18,25 @@ if (!empty($block['clasName'])) {
 ?>
 
 <section class="<?php echo $class_name; ?>" id="<?php echo $anchor; ?>">
-	<div class="preview">
+        <?php
+            $img_position = $teaser['position-right-left'];
+            $position = "img-position-right";
+            if ($img_position === 'left'){
+                $position = "img-position-left";
+            }
+        ?>
+    <div class="preview <?php echo $position; ?>">
 		<div class="gallery-teaser">
-			<?php
-			$images = $teaser['teaser-imgs'];
-            if ( $images ): ?>
-            <ul class="splide__list">
-				<?php foreach ( $images as $image_id ): ?>
-                    <li class="splide__slide">
-						<?php echo wp_get_attachment_image( $image_id, 'large' ); ?>
-                    </li>
-				<?php endforeach; ?>
-            </ul>
-			<?php endif; ?>
+            <div class="img1"><?php echo wp_get_attachment_image($teaser['teaser-img-1'], 'medium'); ?></div>
+            <div class="img2"><?php echo wp_get_attachment_image($teaser['teaser-img-2'], 'medium'); ?></div>
+            <div class="img3"><?php echo wp_get_attachment_image($teaser['teaser-img-3'], 'medium'); ?></div>
 		</div>
         <div class="teaser-content">
             <div class="teaser-headline">
 	            <?php echo $teaser['headline']; ?>
             </div>
             <div class="teaser-btn">
-	            <a href="<?php echo $teaser['btn-see-more']; ?>"><?php echo $teaser['btn-see-more-text']; ?><span class="icon-arrow-right"></span></a>
+	            <a href="<?php echo $teaser['btn-see-more']; ?>"><?php echo $teaser['btn-see-more-text']; ?></a>
               </div>
         </div>
 

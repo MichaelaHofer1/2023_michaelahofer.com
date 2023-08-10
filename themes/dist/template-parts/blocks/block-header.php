@@ -7,7 +7,7 @@ if (!empty($block['anchor'])) {
 
 $class_name = '';
 
-if (!empty($block['clasName'])) {
+if (!empty($block['className'])) {
     $class_name = 'class="' . esc_attr($block['className']) . '"';
 }
 ?>

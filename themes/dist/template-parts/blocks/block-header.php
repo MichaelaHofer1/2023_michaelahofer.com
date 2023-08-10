@@ -33,15 +33,15 @@ $home_header = get_field('header');
         <div class="splide__track">
             <?php
             $images = $home_header['detail-slider'];
-            if( $images ): ?>
-                <ul class="splide__list">
-                    <?php foreach( $images as $image_id ): ?>
-                        <li class="splide__slide">
-                            <?php echo wp_get_attachment_image($image_id, 'large'); ?>
-                        </li>
-                    <?php endforeach; ?>
-                </ul>
-            <?php endif; ?>
+            if ( $images ): ?>
+            <ul class="splide__list">
+		        <?php foreach ( $images as $image_id ): ?>
+                    <li class="splide__slide">
+				        <?php echo wp_get_attachment_image( $image_id, 'large' ); ?>
+                    </li>
+		        <?php endforeach; ?>
+            </ul>
+	        <?php endif; ?>
         </div>
     </div>
 </header>

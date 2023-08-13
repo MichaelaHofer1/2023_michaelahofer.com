@@ -1,0 +1,42 @@
+@use "./variables" as *;
+@use "./mixins" as *;
+
+.teaser-btn {
+  position: absolute;
+  left: 50%;
+  top: 740px;
+  transform: translateX(-50%);
+  @media screen and (min-width: $small-tablet-breakpoint) {
+    top: 100%;
+  }
+  a {
+    display: block;
+    min-width: 180px;
+    text-align: center;
+    padding: .8em 1em;
+    border: 1px solid #919191;
+    z-index: 1;
+    &::before {
+      display: block;
+      content: "";
+      background-color: $text-color;
+      height: 100%;
+      width: 0;
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      right: 0;
+      pointer-events: none;
+      transition: all ease-in-out 250ms;
+    }
+    &:hover {
+      color: $contrast-color;
+      box-shadow: 0 0 3px black;
+    }
+    &:hover::before {
+      left: 0;
+      width: 100%;
+    }
+  }
+}
+

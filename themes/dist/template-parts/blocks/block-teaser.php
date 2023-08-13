@@ -27,9 +27,9 @@ if (!empty($block['className'])) {
         ?>
     <div class="preview <?php echo $position; ?>">
 		<div class="gallery-teaser">
-            <div class="img1"><?php echo wp_get_attachment_image($teaser['teaser-img-1'], 'medium'); ?></div>
-            <div class="img2"><?php echo wp_get_attachment_image($teaser['teaser-img-2'], 'medium'); ?></div>
-            <div class="img3"><?php echo wp_get_attachment_image($teaser['teaser-img-3'], 'medium'); ?></div>
+            <div class="img1"><?php echo wp_get_attachment_image($teaser['teaser-img-1'], 'large'); ?></div>
+            <div class="img2"><?php echo wp_get_attachment_image($teaser['teaser-img-2'], 'large'); ?></div>
+            <div class="img3"><?php echo wp_get_attachment_image($teaser['teaser-img-3'], 'large'); ?></div>
 		</div>
         <div class="teaser-content">
             <div class="teaser-headline">

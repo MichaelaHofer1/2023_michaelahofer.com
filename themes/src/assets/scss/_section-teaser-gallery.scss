@@ -24,10 +24,10 @@
     height: 100%;
     width: 100%;
   }
-  @media screen and (min-width: $desktop-breakpoint) {
+  @media screen and (min-width: $tablet-breakpoint) {
     display: grid;
-    grid-template-columns: repeat(3, 200px);
-    grid-template-rows: repeat(3, 200px);
+    grid-template-columns: repeat(3, 150px);
+    grid-template-rows: repeat(3, 150px);
     gap: 15px;
     div[class^='img']{
       height: auto;
@@ -44,6 +44,10 @@
       grid-area: 1/3/4/4;
     }
   }
+  @media screen and (min-width: $desktop-breakpoint) {
+    grid-template-columns: repeat(3, 200px);
+    grid-template-rows: repeat(3, 200px);
+  }
 
 }
 
@@ -55,7 +59,6 @@
   min-width: 200px;
   @media screen and (min-width: $small-tablet-breakpoint) {
     order: 1;
-    margin-right: 10%;
   }
   .teaser-headline {
     text-align: center;
@@ -66,48 +69,36 @@
       font-size: 1.5em;
     }
   }
-  .teaser-btn {
-     position: absolute;
-     left: 50%;
-     top: 740px;
-     transform: translateX(-50%);
-     padding: .8em 2em;
-     border: 1px solid #919191;
-    @media screen and (min-width: $small-tablet-breakpoint) {
-      top: 100%;
-      /*
-      &::before {
-        display: block;
-        content: "";
-        background-color: $text-color;
-        height: 100%;
-        width: 100%;
-        position: absolute;
-        top: 0;
-        left: -100%;
-        opacity: 0;
-        overflow: hidden;
-      }
-       */
-    }
-    a {
-      display: block;
-      min-width: 130px;
-      text-align: center;
-    }
+  @media screen and (min-width: $desktop-breakpoint) {
+    margin-right: 10%;
   }
 }
 
 
-
-
-
 .img-position-left {
   .teaser-content {
-    @media screen and (min-width: $tablet-breakpoint) {
+    @media screen and (min-width: $small-tablet-breakpoint) {
       order: -1;
+    }
+    @media screen and (min-width: $desktop-breakpoint) {
+      margin-right: 0;
       margin-left: 10%;
     }
+  }
+}
 
+.img-position-right {
+  .gallery-teaser {
+    @media screen and (min-width: $tablet-breakpoint){
+      .img1 {
+        grid-area: 1/1/2/4;
+      }
+      .img2 {
+        grid-area: 2/1/4/3;
+      }
+      .img3 {
+        grid-area: 2/3/4/4;
+      }
+    }
   }
 }

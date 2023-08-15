@@ -59,6 +59,38 @@ if ( function_exists( 'acf_add_options_page' ) ) {
 				'render_template' => 'template-parts/blocks/block-teaser.php',
 			) );
 		};
+
+		if ( function_exists( 'acf_register_block_type' ) ) {
+			acf_register_block_type( array(
+				'name'            => 'Über-mich Teaser',
+				'title'           => __( 'about-me-teaser', 'mh' ),
+				'description'     => __( 'Das ist der Teaserbereich vom Über-mich', 'mh' ),
+				'supports'        => array( 'anchor' => false ),
+				'category'        => 'mh',
+				'keywords'        => array( 'teaser', 'mh', 'home', 'about-me', 'über-mich' ),
+				'post_type'       => array( 'page' ),
+				'align'           => false,
+				'mode'            => false,
+				'icon'            => 'dashicons-admin-users',
+				'render_template' => 'template-parts/blocks/block-about-me-teaser.php',
+			) );
+		};
+
+		if ( function_exists( 'acf_register_block_type' ) ) {
+			acf_register_block_type( array(
+				'name'            => 'Galerie',
+				'title'           => __( 'gallery', 'mh' ),
+				'description'     => __( 'Das ist die Galerie', 'mh' ),
+				'supports'        => array( 'anchor' => false ),
+				'category'        => 'mh',
+				'keywords'        => array( 'gallery', 'mh', 'Galerie', 'Bilder' ),
+				'post_type'       => array( 'page' ),
+				'align'           => false,
+				'mode'            => false,
+				'icon'            => 'dashicons-images-alt',
+				'render_template' => 'template-parts/blocks/block-gallery.php',
+			) );
+		};
 	} );
 
 

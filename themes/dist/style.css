@@ -69,6 +69,7 @@ li,
 ul {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
 img {
@@ -540,6 +541,89 @@ header {
   width: 100%;
 }
 
+.about-me-teaser .teaser-btn {
+  position: static;
+  transform: translateX(0);
+}
+@media screen and (min-width: 650px) {
+  .about-me-teaser .teaser-btn {
+    max-width: 200px;
+    margin: 0 auto;
+  }
+}
+
+.gallery-container li {
+  height: 200px;
+  width: 200px;
+  margin: 5em auto;
+}
+@media screen and (min-width: 650px) {
+  .gallery-container li {
+    margin: 0;
+  }
+}
+.gallery-container li img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+@media screen and (min-width: 650px) {
+  .gallery-container .gallery-grid {
+    display: grid;
+    grid-template-columns: 200px 200px;
+    gap: 30px;
+    justify-content: center;
+  }
+  .gallery-container .gallery-grid .img-description {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: 0;
+    padding: 0.8em 0.5em;
+    background-color: #000;
+    color: #ffffff;
+    transform: translateX(-100%);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 200ms ease-in-out, opacity 200ms ease-in-out;
+  }
+  .gallery-container .gallery-grid li {
+    position: relative;
+    overflow-y: hidden;
+  }
+  .gallery-container .gallery-grid li:hover .img-description {
+    opacity: 1;
+    transform: translateX(0);
+    pointer-events: all;
+    cursor: pointer;
+  }
+  .gallery-container .gallery-grid li:nth-child(1) {
+    grid-area: 1/1/2/3;
+    width: auto;
+    height: 430px;
+  }
+  .gallery-container .gallery-grid li:nth-child(4) {
+    grid-area: 3/1/4/3;
+    width: auto;
+  }
+  .gallery-container .gallery-grid li:nth-child(9) {
+    grid-area: 6/2/8/3;
+    height: 430px;
+  }
+  .gallery-container .gallery-grid li:nth-child(12) {
+    grid-area: 9/1/10/3;
+    width: auto;
+    height: 430px;
+  }
+  .gallery-container .gallery-grid li:nth-child(13) {
+    grid-area: 13/1/14/3;
+    width: auto;
+  }
+}
+
 #footer-page {
   display: flex;
   align-items: center;
@@ -671,25 +755,70 @@ header {
 }
 
 @media screen and (min-width: 650px) {
-  .img-position-left .teaser-content {
+  .txt-position-left .teaser-content {
     order: -1;
   }
 }
 @media screen and (min-width: 1200px) {
-  .img-position-left .teaser-content {
+  .txt-position-left .teaser-content {
     margin-right: 0;
     margin-left: 10%;
   }
 }
 
 @media screen and (min-width: 800px) {
-  .img-position-right .gallery-teaser .img1 {
+  .txt-position-right .gallery-teaser .img1 {
     grid-area: 1/1/2/4;
   }
-  .img-position-right .gallery-teaser .img2 {
+  .txt-position-right .gallery-teaser .img2 {
     grid-area: 2/1/4/3;
   }
-  .img-position-right .gallery-teaser .img3 {
+  .txt-position-right .gallery-teaser .img3 {
     grid-area: 2/3/4/4;
+  }
+}
+
+.about-me-teaser {
+  min-height: 800px;
+}
+.about-me-teaser .preview {
+  padding-top: 7em;
+}
+.about-me-teaser .teaser-content {
+  max-width: 350px;
+}
+.about-me-teaser .content {
+  position: absolute;
+  top: 320px;
+  left: 0;
+}
+@media screen and (min-width: 650px) {
+  .about-me-teaser .content {
+    position: static;
+    max-width: 250px;
+    text-align: center;
+  }
+}
+.about-me-teaser .content .teaser-text {
+  padding: 2em 0;
+}
+.about-me-teaser .gallery-teaser .img1 {
+  min-height: 250px;
+  margin-bottom: 0;
+}
+@media screen and (min-width: 800px) {
+  .about-me-teaser .gallery-teaser {
+    display: block;
+    height: 350px;
+    width: 270px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    overflow: hidden;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .about-me-teaser .gallery-teaser {
+    height: 420px;
+    width: 350px;
   }
 }

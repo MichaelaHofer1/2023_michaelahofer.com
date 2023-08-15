@@ -19,10 +19,10 @@ if (!empty($block['className'])) {
 
 <section class="<?php echo $class_name; ?>" id="<?php echo $anchor; ?>">
         <?php
-            $img_position = $teaser['position-right-left'];
-            $position = "img-position-right";
-            if ($img_position === 'left'){
-                $position = "img-position-left";
+            $txt_position = $teaser['position-right-left'];
+            $position = "txt-position-right";
+            if ($txt_position === 'left'){
+                $position = "txt-position-left";
             }
         ?>
     <div class="preview <?php echo $position; ?>">

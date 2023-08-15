@@ -75,7 +75,7 @@
 }
 
 
-.img-position-left {
+.txt-position-left {
   .teaser-content {
     @media screen and (min-width: $small-tablet-breakpoint) {
       order: -1;
@@ -87,7 +87,7 @@
   }
 }
 
-.img-position-right {
+.txt-position-right {
   .gallery-teaser {
     @media screen and (min-width: $tablet-breakpoint){
       .img1 {

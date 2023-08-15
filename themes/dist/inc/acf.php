@@ -56,7 +56,7 @@ if ( function_exists( 'acf_add_options_page' ) ) {
 				'align'           => false,
 				'mode'            => false,
 				'icon'            => 'welcome-widgets-menus',
-				'render_template' => 'template-parts/blocks/block-teaser.php',
+				'render_template' => 'template-parts/blocks/block-gallery-teaser.php',
 			) );
 		};
 
@@ -71,7 +71,7 @@ if ( function_exists( 'acf_add_options_page' ) ) {
 				'post_type'       => array( 'page' ),
 				'align'           => false,
 				'mode'            => false,
-				'icon'            => 'dashicons-admin-users',
+				'icon'            => 'admin-users',
 				'render_template' => 'template-parts/blocks/block-about-me-teaser.php',
 			) );
 		};
@@ -87,7 +87,7 @@ if ( function_exists( 'acf_add_options_page' ) ) {
 				'post_type'       => array( 'page' ),
 				'align'           => false,
 				'mode'            => false,
-				'icon'            => 'dashicons-images-alt',
+				'icon'            => 'schedule',
 				'render_template' => 'template-parts/blocks/block-gallery.php',
 			) );
 		};

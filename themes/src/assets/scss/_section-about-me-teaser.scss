@@ -1,0 +1,42 @@
+@use "./variables" as *;
+@use "./mixins" as *;
+
+.about-me-teaser {
+  min-height: 800px;
+  .preview {
+    padding-top: 7em;
+  }
+  .teaser-content {
+    max-width: 350px;
+  }
+  .content {
+    position: absolute;
+    top: 320px;
+    left: 0;
+    @media screen and (min-width: $small-tablet-breakpoint) {
+      position: static;
+      max-width: 250px;
+      text-align: center;
+    }
+    .teaser-text {
+      padding: 2em 0;
+    }
+  }
+  .gallery-teaser {
+    .img1 {
+      min-height: 250px;
+      margin-bottom: 0;
+    }
+    @media screen and (min-width: $tablet-breakpoint) {
+      display: block;
+      height: 350px;
+      width: 270px;
+      object-fit: cover;
+      overflow: hidden;
+    }
+    @media screen and (min-width: $desktop-breakpoint) {
+      height: 420px;
+      width: 350px;
+    }
+  }
+}

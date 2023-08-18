@@ -1,0 +1,14 @@
+@use "./variables" as *;
+@use "./mixins" as *;
+
+
+#slideshow-section{
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 0;
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+}

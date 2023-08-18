@@ -15,12 +15,13 @@ if (!empty($block['className'])) {
 
 <?php
 	$gallery = get_field('gallery');
+    $slide_show_imgs = get_field( 'slide-show' );
 ?>
 
 <?php
 $images = $gallery['imgs'];
 if( $images ): ?>
-<section class="gallery-container">
+<section class="gallery-container <?php echo $class_name ?>">
 	<ul class="gallery-grid">
 		<?php foreach( $images as $image_array ): ?>
 			<li class="img">

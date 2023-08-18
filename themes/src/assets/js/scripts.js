@@ -1,3 +1,5 @@
+import Splide from '@splidejs/splide';
+
 function jsLoaded() {
     const htmlTag = document.querySelector('html')
     htmlTag.classList.remove('no-js')
@@ -6,25 +8,60 @@ function jsLoaded() {
 
 
 document.addEventListener('DOMContentLoaded', function () {
-    const sliderInitalizeSlideshow = function () {
-        let splide = new Splide('#header-slider', {
+    const sliderInitalize = function () {
+        let splide = new Splide('#slideshow-section', {
             type: 'loop',
-            easing: 'ease',
-            autoplay: true,
             perPage: 1,
+            autoplay: false,
             interval: 3000,
             speed: 750,
-            pagination: false,
-            arrows: false
+            easing: 'ease',
+            drag: true,
+            pauseOnHover: true,
+            pagination: true,
+            arrows: false,
+            width: '200px',
+            height: '200px'
         });
         splide.mount();
     };
 
-    if (window.acf) {
-        window.acf.addAction('render_block_preview/type=header', sliderInitalizeSlideshow)
+    sliderInitalize();
+    var gallerySlider = document.getElementById('slideshow-section');
+    if (gallerySlider) {
+        sliderInitalize();
+    }
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+    const headerSliderInitalize = function () {
+        let splide = new Splide('#header-slider', {
+            type: 'loop',
+            perPage: 1,
+            autoplay: true,
+            interval: 3000,
+            pauseOnHover: false,
+            speed: 750,
+            easing: 'ease',
+            drag: true,
+            pagination: true,
+            arrows: false,
+            height: '100vh - 65px',
+            breakpoints: {
+                height: '100vh - 100px'
+            },
+            width: '100vw'
+        });
+        splide.mount();
+    };
+
+    var headerSlider = document.getElementById('header-slider');
+    if (headerSlider) {
+        headerSliderInitalize();
     }
 
 });
+
 
 
 // Event Listener "DOMContentLoaded" wird nur ausgeführt, wenn der DOM fertig aufgebaut ist

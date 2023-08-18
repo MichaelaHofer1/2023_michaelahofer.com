@@ -91,6 +91,22 @@ if ( function_exists( 'acf_add_options_page' ) ) {
 				'render_template' => 'template-parts/blocks/block-gallery.php',
 			) );
 		};
+
+		if ( function_exists( 'acf_register_block_type' ) ) {
+			acf_register_block_type( array(
+				'name'            => 'slide-show',
+				'title'           => __( 'slideshow', 'mh' ),
+				'description'     => __( 'Das ist die Slide-Show', 'mh' ),
+				'supports'        => array( 'anchor' => false ),
+				'category'        => 'mh',
+				'keywords'        => array( 'slider', 'mh', 'Slide-Show', 'Bilder' ),
+				'post_type'       => array( 'page' ),
+				'align'           => false,
+				'mode'            => false,
+				'icon'            => 'images-alt2',
+				'render_template' => 'template-parts/blocks/block-slide-show.php',
+			) );
+		};
 	} );
 
 

@@ -69,6 +69,7 @@ li,
 ul {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
 img {
@@ -548,6 +549,97 @@ header {
     .about-me-teaser .teaser-btn {
         max-width: 200px;
         margin: 0 auto;
+    }
+}
+
+#slideshow-section {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 0;
+}
+#slideshow-section img {
+    height: 100%;
+    width: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+.gallery-container li {
+    height: 200px;
+    width: 200px;
+    margin: 5em auto;
+}
+@media screen and (min-width: 650px) {
+    .gallery-container li {
+        margin: 0;
+    }
+}
+.gallery-container li img {
+    -o-object-fit: cover;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+@media screen and (min-width: 650px) {
+    .gallery-container {
+        padding-top: 5em;
+    }
+    .gallery-container .gallery-grid {
+        display: grid;
+        grid-template-columns: 200px 200px;
+        gap: 30px;
+        justify-content: center;
+    }
+    .gallery-container .gallery-grid .img-description {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        margin: 0;
+        padding: 0.8em 0.5em;
+        background-color: #000;
+        color: #ffffff;
+        transform: translateX(-100%);
+        opacity: 0;
+        pointer-events: none;
+        transition: transform 200ms ease-in-out, opacity 200ms ease-in-out;
+    }
+    .gallery-container .gallery-grid li {
+        position: relative;
+        overflow-y: hidden;
+    }
+    .gallery-container .gallery-grid li:hover .img-description {
+        opacity: 1;
+        transform: translateX(0);
+        pointer-events: all;
+        cursor: pointer;
+    }
+    .gallery-container .gallery-grid li:nth-child(1) {
+        grid-area: 1/1/2/3;
+        width: auto;
+        height: 430px;
+    }
+    .gallery-container .gallery-grid li:nth-child(4) {
+        grid-area: 3/1/4/3;
+        width: auto;
+    }
+    .gallery-container .gallery-grid li:nth-child(9) {
+        grid-area: 5/2/7/3;
+        height: 430px;
+    }
+    .gallery-container .gallery-grid li:nth-child(12) {
+        grid-area: 8/1/8/3;
+        width: auto;
+        height: 430px;
+    }
+    .gallery-container .gallery-grid li:nth-child(15) {
+        grid-area: 10/1/10/3;
+        width: auto;
+    }
+    .gallery-container .gallery-grid li:nth-child(18) {
+        grid-area: 12/1/14/2;
+        height: 430px;
     }
 }
 

@@ -49,7 +49,9 @@
 </footer>
 
 
-<div id="to-top">Top</div>
+<div id="to-top">
+    nach<br>oben
+</div>
 
 <?php
 wp_footer();

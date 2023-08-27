@@ -6,6 +6,22 @@ function jsLoaded() {
     htmlTag.classList.add('js')
 }
 
+function showToTopBtn() {
+    const toTopBtn = document.getElementById('to-top')
+    if (window.scrollY > 250) {
+        toTopBtn.classList.add('show')
+    } else {
+        toTopBtn.classList.remove('show')
+    }
+}
+
+document.getElementById('to-top').addEventListener('click', function() {
+    document.body.scrollTop = 0
+    document.documentElement.scrollTop = 0
+})
+
+
+
 
 document.addEventListener('DOMContentLoaded', function () {
     const sliderInitalize = function () {
@@ -59,7 +75,6 @@ document.addEventListener('DOMContentLoaded', function () {
     if (headerSlider) {
         headerSliderInitalize();
     }
-
 });
 
 
@@ -67,4 +82,9 @@ document.addEventListener('DOMContentLoaded', function () {
 // Event Listener "DOMContentLoaded" wird nur ausgeführt, wenn der DOM fertig aufgebaut ist
 document.addEventListener('DOMContentLoaded', function () {
     jsLoaded()
+    showToTopBtn()
 }, false)
+
+document.addEventListener('scroll', function () {
+    showToTopBtn()
+})

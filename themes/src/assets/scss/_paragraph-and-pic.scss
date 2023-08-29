@@ -1,0 +1,42 @@
+@use "./variables" as *;
+
+.para-photo-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin: 5em 5% 0;
+  @media screen and (min-width: $desktop-breakpoint) {
+    flex-direction: row;
+    &.left {
+      .photo-container {
+        order: -1;
+      }
+    }
+  }
+
+
+  .paragraph-container {
+    max-width: 65%;
+    @media screen and (min-width: $desktop-breakpoint) {
+      padding: 0 2em;
+    }
+  }
+
+}
+
+.photo-container {
+  height: 400px;
+  width: 300px;
+  order: -1;
+
+  img {
+    height: 400px;
+    width: 300px;
+    object-fit: cover;
+  }
+
+  @media screen and (min-width: $desktop-breakpoint) {
+    order: 1;
+  }
+}

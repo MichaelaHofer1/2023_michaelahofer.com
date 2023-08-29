@@ -17,7 +17,7 @@ if (!empty($block['className'])) {
 	$teaser = get_field('teaser');
 ?>
 
-<section class="<?php echo $class_name; ?>" id="<?php echo $anchor; ?>">
+<section <?php echo $class_name; echo $anchor; ?>>
         <?php
             $txt_position = $teaser['position-right-left'];
             $position = "txt-position-right";

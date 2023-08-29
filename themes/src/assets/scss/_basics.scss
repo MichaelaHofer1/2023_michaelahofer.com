@@ -73,6 +73,10 @@ img {
   vertical-align: bottom;
 }
 
+main {
+  min-height: 100vh;
+}
+
 .container {
   padding: 0 5%;
 }
@@ -84,4 +88,19 @@ img {
   letter-spacing: 3px;
   text-transform: uppercase;
   text-align: center;
+}
+
+
+#page-headline {
+  font-weight: 200;
+  letter-spacing: 6px;
+  text-shadow: 6px 3px #d2d2d294;
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+  margin: 2em auto;
+  span {
+    border-bottom: 1px solid black;
+    padding-bottom: 0.1em;
+  }
 }

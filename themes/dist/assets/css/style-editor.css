@@ -96,6 +96,18 @@
   pointer-events: auto;
 }
 
+.list-item {
+  max-width: 70%;
+  margin: 0 auto;
+  padding: 0.5em;
+  list-style-type: square;
+}
+@media screen and (min-width: 650px) {
+  .list-item {
+    max-width: 50%;
+  }
+}
+
 .gallery-container li {
   height: 200px;
   width: 200px;
@@ -372,5 +384,82 @@
   .about-me-teaser .gallery-teaser {
     height: 420px;
     width: 350px;
+  }
+}
+
+.profile-pic {
+  margin: 0;
+  text-align: center;
+  padding-top: 4em;
+}
+.profile-pic img {
+  max-width: 300px;
+  max-height: 400px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media screen and (min-width: 1200px) {
+  .profile-pic {
+    position: absolute;
+    padding: 0;
+    top: 46%;
+    right: 5%;
+  }
+}
+
+.about-me-text-paragraph {
+  max-width: 70%;
+  margin: 0 auto;
+  padding-top: 4em;
+}
+@media screen and (min-width: 800px) {
+  .about-me-text-paragraph {
+    max-width: 50%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .about-me-text-paragraph {
+    margin: 0 auto 0 10%;
+  }
+}
+
+.para-photo-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin: 5em 5% 0;
+}
+@media screen and (min-width: 1200px) {
+  .para-photo-container {
+    flex-direction: row;
+  }
+  .para-photo-container.left .photo-container {
+    order: -1;
+  }
+}
+.para-photo-container .paragraph-container {
+  max-width: 65%;
+}
+@media screen and (min-width: 1200px) {
+  .para-photo-container .paragraph-container {
+    padding: 0 2em;
+  }
+}
+
+.photo-container {
+  height: 400px;
+  width: 300px;
+  order: -1;
+}
+.photo-container img {
+  height: 400px;
+  width: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media screen and (min-width: 1200px) {
+  .photo-container {
+    order: 1;
   }
 }

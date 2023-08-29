@@ -8,6 +8,7 @@
 @use "./navigation";
 @use "./animate";
 @use "./buttons";
+@use "./list";
 @use "./slideshow";
 @use "./columns";
 @use "./section-gallery";
@@ -19,6 +20,8 @@
 @use "./about-me";
 @use "section-teaser-gallery";
 @use "./section-about-me-teaser";
+@use "./section-about-me";
+@use "./paragraph-and-pic";
 @use "./section-basic";
 @use "./section-contact";
 @use "./section-news";

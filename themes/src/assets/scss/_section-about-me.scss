@@ -1,0 +1,32 @@
+@use "./variables" as *;
+
+.profile-pic {
+  margin: 0;
+  text-align: center;
+  padding-top: 4em;
+
+  img {
+    max-width: 300px;
+    max-height: 400px;
+    object-fit: cover;
+  }
+
+  @media screen and (min-width: $desktop-breakpoint) {
+    position: absolute;
+    padding: 0;
+    top: 46%;
+    right: 5%;
+  }
+}
+
+.about-me-text-paragraph {
+  max-width: 70%;
+  margin: 0 auto;
+  padding-top: 4em;
+  @media screen and (min-width: $tablet-breakpoint) {
+    max-width: 50%;
+  }
+  @media screen and (min-width: $desktop-breakpoint) {
+    margin: 0 auto 0 10%;
+  }
+}

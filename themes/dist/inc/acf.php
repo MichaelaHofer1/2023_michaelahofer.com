@@ -107,6 +107,54 @@ if ( function_exists( 'acf_add_options_page' ) ) {
 				'render_template' => 'template-parts/blocks/block-slide-show.php',
 			) );
 		};
+
+		if ( function_exists( 'acf_register_block_type' ) ) {
+			acf_register_block_type( array(
+				'name'            => 'page-headline',
+				'title'           => __( 'page-headline', 'mh' ),
+				'description'     => __( 'Das ist die Seiten-Überschrift', 'mh' ),
+				'supports'        => array( 'anchor' => false ),
+				'category'        => 'mh',
+				'keywords'        => array( 'page-headline', 'mh', 'Header', 'Überschrift' ),
+				'post_type'       => array( 'page' ),
+				'align'           => false,
+				'mode'            => false,
+				'icon'            => 'heading',
+				'render_template' => 'template-parts/blocks/block-page-headline.php',
+			) );
+		};
+		if ( function_exists( 'acf_register_block_type' ) ) {
+			acf_register_block_type( array(
+				'name'            => 'Liste',
+				'title'           => __( 'Liste', 'mh' ),
+				'description'     => __( 'Das ist eine Aufzählung', 'mh' ),
+				'supports'        => array( 'anchor' => false ),
+				'category'        => 'mh',
+				'keywords'        => array( 'list', 'mh', 'Aufzählung', 'Liste' ),
+				'post_type'       => array( 'page' ),
+				'align'           => false,
+				'mode'            => false,
+				'icon'            => 'editor-ul',
+				'render_template' => 'template-parts/blocks/block-list.php',
+			) );
+		};
+
+		if ( function_exists( 'acf_register_block_type' ) ) {
+			acf_register_block_type( array(
+				'name'            => 'Absatz mit Bild',
+				'title'           => __( 'Absatz mit Bild', 'mh' ),
+				'description'     => __( 'Das ist ein Absatz mit einem dazugehörigen Bild', 'mh' ),
+				'supports'        => array( 'anchor' => false ),
+				'category'        => 'mh',
+				'keywords'        => array( 'Über mich', 'mh', 'Absatz', 'Bild', 'profilbild' ),
+				'post_type'       => array( 'page' ),
+				'align'           => false,
+				'mode'            => false,
+				'icon'            => 'align-right',
+				'render_template' => 'template-parts/blocks/paragraph-with-photo.php',
+			) );
+		};
+
 	} );
 
 

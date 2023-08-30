@@ -170,7 +170,22 @@ header {
 @media screen and (min-width: 1200px) {
   #title-container {
     height: 100%;
+    width: 40%;
+    background-color: #ffffff;
+    position: relative;
+  }
+  #title-container::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
     width: 0;
+    transform: translateX(100%);
+    height: 0;
+    border-style: solid;
+    border-width: 100vh 300px 0 0;
+    border-color: #ffffff transparent transparent transparent;
   }
 }
 
@@ -182,7 +197,7 @@ header {
   padding: 2.5em 1.5em;
   text-align: center;
   max-width: 500px;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: #ffffff;
 }
 @media screen and (min-width: 650px) {
   #title {
@@ -192,7 +207,7 @@ header {
 @media screen and (min-width: 1200px) {
   #title {
     top: 50%;
-    left: 25%;
+    left: 67%;
   }
 }
 #title h1 {
@@ -230,7 +245,7 @@ header {
 @media screen and (min-width: 1200px) {
   #header-slider {
     height: 100%;
-    width: 50%;
+    width: 60%;
   }
 }
 #header-slider ul {
@@ -558,6 +573,12 @@ header {
   left: 0;
   width: 100%;
 }
+.teaser-btn.btn-back-home {
+  position: static;
+  width: 235px;
+  margin: 0 auto;
+  transform: translateX(0);
+}
 
 .about-me-teaser .teaser-btn {
   position: static;
@@ -587,19 +608,18 @@ header {
   cursor: pointer;
   text-align: center;
   overflow: hidden;
-  transition: opacity 150ms ease-in;
+  transition: opacity 150ms ease-in, transform 250ms ease-in-out;
 }
 #to-top::after {
   content: "";
   display: block;
   position: absolute;
   left: 0;
-  right: 0;
-  bottom: 0;
+  top: 0;
   height: 0;
-  border-radius: 50px;
+  width: 100%;
   z-index: -1;
-  transition: all 100ms linear;
+  transition: all 250ms ease-in-out;
 }
 #to-top:hover {
   transform: translateY(-0.5em);
@@ -608,6 +628,7 @@ header {
 }
 #to-top:hover::after {
   background-color: #ffffff;
+  bottom: 0;
   height: 100%;
 }
 
@@ -816,6 +837,10 @@ header {
 }
 .social-icons a {
   padding-left: 0.3em;
+}
+
+#error-page {
+  margin-top: 13em;
 }
 
 .preview {
@@ -1043,4 +1068,55 @@ header {
   .photo-container {
     order: 1;
   }
+}
+
+.contact-form {
+  max-width: 80%;
+}
+@media screen and (min-width: 1200px) {
+  .contact-form {
+    padding: 0 5%;
+    max-width: 950px;
+  }
+}
+.contact-form .contact-btn {
+  position: absolute;
+  left: 50%;
+  top: 740px;
+  transform: translateX(-50%);
+  display: block;
+  min-width: 180px;
+  text-align: center;
+  padding: 0.8em 1em;
+  z-index: 1;
+}
+@media screen and (min-width: 650px) {
+  .contact-form .contact-btn {
+    top: 100%;
+  }
+}
+.contact-form .contact-btn::before {
+  display: block;
+  content: "";
+  background-color: #000;
+  height: 100%;
+  width: 0;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  right: 0;
+  pointer-events: none;
+  transition: all ease-in-out 250ms;
+}
+.contact-form .contact-btn:hover {
+  color: #ffffff;
+  box-shadow: 0 0 3px black;
+}
+.contact-form .contact-btn:hover::before {
+  left: 0;
+  width: 100%;
+}
+
+#wpforms-submit-239 {
+  border: 1px solid #919191;
 }

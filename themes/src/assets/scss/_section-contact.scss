@@ -1,0 +1,31 @@
+@use "./variables" as *;
+@use "./mixins" as *;
+
+.contact-form {
+  max-width: 80%;
+  @media screen and (min-width: $desktop-breakpoint) {
+    padding: 0 5%;
+    max-width: 950px;
+  }
+
+  .contact-btn {
+    position: absolute;
+    left: 50%;
+    top: 740px;
+    transform: translateX(-50%);
+    display: block;
+    min-width: 180px;
+    text-align: center;
+    padding: .8em 1em;
+    z-index: 1;
+    @media screen and (min-width: $small-tablet-breakpoint) {
+      top: 100%;
+    }
+
+  @include btn-hover-effect
+  }
+}
+
+#wpforms-submit-239 {
+  border: 1px solid #919191;
+}

@@ -19,7 +19,22 @@ header {
   z-index: 1;
   @media screen and (min-width: $desktop-breakpoint) {
     height: 100%;
-    width: 0;
+    width: 40%;
+    background-color: $contrast-color;
+    position: relative;
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 0;
+      transform: translateX(100%);
+      height: 0;
+      border-style: solid;
+      border-width: 100vh 300px 0 0;
+      border-color: $contrast-color transparent transparent transparent;
+    }
   }
 }
 
@@ -31,13 +46,13 @@ header {
   padding: 2.5em 1.5em;
   text-align: center;
   max-width: 500px;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: $contrast-color;
   @media screen and (min-width: $small-tablet-breakpoint) {
     padding: 3em 2.5em;
   }
   @media screen and (min-width: $desktop-breakpoint) {
     top: 50%;
-    left: 25%;
+    left: 67%;
   }
   h1 {
     font-size: 2em;
@@ -70,7 +85,7 @@ header {
   z-index: 0;
   @media screen and (min-width: $desktop-breakpoint) {
     height: 100%;
-    width: 50%;
+    width: 60%;
   }
   ul {
     margin: 0;

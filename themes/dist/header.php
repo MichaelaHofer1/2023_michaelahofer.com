@@ -33,7 +33,8 @@
             'menu_class' => 'nav-menu',
             'menu_id' => 'nav-main',
             'fallback_cb' => false,
-            'depth' => 2
+            'depth' => 2,
+            'add_a_class' => 'nav__link'
         ));
         ?>
 

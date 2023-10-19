@@ -4,7 +4,6 @@ if (!empty($block['anchor'])) {
     $anchor = 'id="' . esc_attr($block['anchor']) . '"';
 }
 
-
 $class_name = '';
 
 if (!empty($block['className'])) {
@@ -29,15 +28,16 @@ $home_header = get_field('header');
             </h1>
         </div>
     </div>
+
     <div id="header-slider" class="splide">
         <div class="splide__track">
             <?php
-            $images = $home_header['detail-slider'];
+           $images = $home_header['detail-slider'];
             if ( $images ): ?>
             <ul class="splide__list">
 		        <?php foreach ( $images as $image_id ): ?>
                     <li class="splide__slide">
-				        <?php echo wp_get_attachment_image( $image_id, 'large' ); ?>
+				        <?php echo wp_get_attachment_image( $image_id, 'large' );?>
                     </li>
 		        <?php endforeach; ?>
             </ul>

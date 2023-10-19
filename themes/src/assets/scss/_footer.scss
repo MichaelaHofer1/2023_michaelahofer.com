@@ -1,12 +1,15 @@
 @use "./variables" as *;
+@use "./mixins" as *;
 
 #footer-page {
   display: flex;
   align-items: center;
   flex-direction: column;
   background-color: $text-color;
+  color: $contrast-color;
   padding: 3em 0;
   margin-top: 8em;
+  font-weight: 100;
   @media screen and (min-width: $desktop-breakpoint) {
     flex-direction: row;
     justify-content: space-between;
@@ -14,9 +17,6 @@
     padding: 0 5%;
     font-size: 1.2em;
     margin-top: 10em;
-  }
-  .copyright {
-    padding-top: 0.7em;
   }
 }
 
@@ -26,9 +26,27 @@
   @media screen and (min-width: $desktop-breakpoint) {
     text-align: left;
   }
+
   .nav-menu li {
     @media screen and (min-width: $desktop-breakpoint) {
       padding-right: 1em;
+    }
+  }
+
+  a {
+    color: $contrast-color;
+
+    &:hover {
+      color: #8f8f8f;
+    }
+  }
+
+  ul {
+    @media screen and (min-width: $desktop-breakpoint) {
+      display: flex;
+      li {
+        padding-right: 1em;
+      }
     }
   }
 }
@@ -41,10 +59,14 @@
 }
 
 
-
-.social-icons  {
+.social-icons {
   font-size: 1.5em;
+  margin:  .4em 0;
   a {
-    padding-left: .3em;
+    padding: 0 .3em;
+    color: #f0f0f0;
+    &:hover {
+      color: #8f8f8f;
+    }
   }
 }

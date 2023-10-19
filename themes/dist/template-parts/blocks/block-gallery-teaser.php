@@ -27,6 +27,7 @@ if (!empty($block['className'])) {
         ?>
     <div class="preview <?php echo $position; ?>">
 		<div class="gallery-teaser">
+            <a href="<?php echo $teaser['btn-see-more']; ?>" class="link__teaser-overlay"></a>
             <div class="img1"><?php echo wp_get_attachment_image($teaser['teaser-img-1'], 'large'); ?></div>
             <div class="img2"><?php echo wp_get_attachment_image($teaser['teaser-img-2'], 'large'); ?></div>
             <div class="img3"><?php echo wp_get_attachment_image($teaser['teaser-img-3'], 'large'); ?></div>

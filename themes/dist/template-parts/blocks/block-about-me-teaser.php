@@ -26,6 +26,7 @@ if (!empty($block['className'])) {
 	?>
 	<div class="preview  <?php echo $position; ?>">
 		<div class="gallery-teaser">
+            <a href="<?php echo $about_me_teaser['about-me-link']; ?>" class="link__teaser-overlay"></a>
 			<div class="img1"><?php echo wp_get_attachment_image($about_me_teaser['profile-pic'], 'large'); ?></div>
 		</div>
 		<div class="teaser-content">

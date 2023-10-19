@@ -3,13 +3,15 @@
 
 header {
   height: calc(100vh - $navbar-height-mobile);
-  width: 100%;
+  width: 100vw;
   display: flex;
   flex-direction: column;
   position: relative;
   @media screen and (min-width: $desktop-breakpoint) {
     flex-direction: row;
     height: calc(100vh - $navbar-height-desktop);
+    margin: auto calc(50% - 50vw);
+
   }
 }
 
@@ -83,6 +85,7 @@ header {
   max-width: 2000px;
   margin-left: auto;
   z-index: 0;
+  filter: grayscale(100%);
   @media screen and (min-width: $desktop-breakpoint) {
     height: 100%;
     width: 60%;
@@ -99,4 +102,25 @@ header {
     }
   }
 }
+/*
+.slides {
+  height: 50vh;
+  width: 100%;
+  max-width: 2000px;
+  margin-left: auto;
+  z-index: 0;
+  filter: grayscale(100%);
+  @media screen and (min-width: $desktop-breakpoint) {
+    height: 100%;
+    width: 60%;
+  }
 
+  img {
+    object-fit: cover;
+    width: 100%;
+    height: 50vh;
+    @media screen and (min-width: $desktop-breakpoint) {
+      height: calc(100vh - 100px);
+    }
+  }
+}*/

@@ -1,0 +1,7 @@
+- Home:
+    - Teaser-Bilder klickbar -> direkt auf die Seite gelangen
+
+
+- Galerie:
+    - Slideshow in Galerie-Grid einfügen
+    - Lightbox

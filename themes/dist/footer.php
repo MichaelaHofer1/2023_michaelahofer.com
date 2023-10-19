@@ -15,7 +15,7 @@
     </nav>
     <div class="social-icons">
         <?php
-        $social_links = get_field('social_links', 'options');
+        $social_links = get_field('social-links', 'options');
         ?>
 
         <?php if($social_links['facebook']): ?>
@@ -29,13 +29,6 @@
             <a href="<?php echo $social_links['instagram']; ?>"  target="_blank">
                 <span class="icon-instagram" aria-hidden="true"></span>
                 <span class="screen-reader-text">Folge mir auf Instagram</span>
-            </a>
-        <?php endif; ?>
-
-        <?php if($social_links['email']): ?>
-            <a href="<?php echo esc_url($social_links['email']); ?>" >
-                <span class="icon-mail4" aria-hidden="true"></span>
-                <span class="screen-reader-text">Sende eine Email</span>
             </a>
         <?php endif; ?>
     </div>

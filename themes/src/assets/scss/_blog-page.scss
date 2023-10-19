@@ -1,0 +1,50 @@
+@use "./variables" as *;
+@use "./mixins" as *;
+
+.post {
+  width: 70%;
+  margin: 2em auto;
+  @media screen and (min-width: $desktop-breakpoint) {
+    width: 500px;
+  }
+  .meta-data {
+    margin: 1.3em 0 .5em;
+    position: relative;
+    p {
+      margin: 0;
+      span {
+        font-style: italic;
+        font-size: .7em;
+      } a {
+        transition: text-decoration 150ms ease-in;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 20%;
+      left: -15px;
+      background-color: $text-color;
+      height: 6px;
+      width: 6px;
+    }
+  }
+
+  h2 {
+    font-size: 1.1em;
+    font-weight: 300;
+    margin-top: 0;
+    letter-spacing: 1px;
+    transition: text-shadow 150ms ease-in;
+    &:hover {
+      text-shadow: 6px 3px rgba(112, 112, 112, 0.30);
+    }
+    span {
+      font-weight: 200;
+    }
+  }
+}

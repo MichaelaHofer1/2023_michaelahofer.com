@@ -90,6 +90,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
+const sliderContainer = document.querySelectorAll('.slider__gallery');
+//giving each slider on the page a numbered class
+sliderContainer.forEach(( cur, i) =>
+    cur.classList.add(`slider--${i}`)
+)
+const slidersPerPage = document.querySelectorAll('[class*="slider--"]')
+console.log([...slidersPerPage])
 
 
 
@@ -97,85 +104,89 @@ document.addEventListener('DOMContentLoaded', function () {
 // Gallery Sliders
 const slider = function () {
     const slides = document.querySelectorAll('.slide');
-    const dotContainer = document.querySelector('.dots')
+    const dotContainer = document.querySelector('.dots');
 
     let curSlide = 0
     const maxSlide = slides.length
 
+        // creating Dots and active Dot
+        const createDots = function () {
+            slides.forEach( function (_, i) {
+                dotContainer.insertAdjacentHTML('beforeend',`<button class="dots__dot" data-slide="${i}"></button>`)
+            })
+        }
+        const activateDot = function (slide) {
+            const dots = document.querySelectorAll('.dots__dot')
+            const dotActive = document.querySelector(`.dots__dot[data-slide="${slide}"]`)
 
-    // creating Dots and active Dot
-    const createDots = function () {
-        slides.forEach( function (_, i) {
-            dotContainer.insertAdjacentHTML('beforeend',`<button class="dots__dot" data-slide="${i}"></button>`)
+            dots.forEach(dot => dot.classList.remove('.dots__dot--active'));
+            dots.forEach(dot => dot.style.backgroundColor = '#5b5b5b')
+
+            dotActive.classList.add('.dots__dot--active')
+            dotActive.style.backgroundColor = 'white'
+
+        };
+
+        // go to slide
+        const goToSlide = function (slide) {
+            slides.forEach( (s, i) =>
+            s.style.transform = `translateX(${100 * (i-slide)}%)`)
+        }
+
+
+        // next slide
+        const nextSlide = function () {
+            if(curSlide === maxSlide - 1) {
+                curSlide = 0;
+            } else {
+                curSlide++
+            }
+            goToSlide(curSlide);
+            activateDot(curSlide);
+        }
+
+        // previous slide
+        const prevSlide = function () {
+            if ( curSlide === 0) {
+                curSlide = maxSlide - 1;
+            } else {
+                curSlide--
+            }
+            goToSlide(curSlide)
+            activateDot(curSlide)
+        }
+
+        const init = function () {
+            goToSlide(0);
+            createDots();
+            activateDot(curSlide);
+        }
+        init();
+
+        document.addEventListener('keydown', function (e) {
+            if(e.key === 'ArrowLeft') prevSlide();
+            if(e.key === 'ArrowRight') nextSlide();
         })
-    }
-    const activateDot = function (slide) {
-        const dots = document.querySelectorAll('.dots__dot')
-        const dotActive = document.querySelector(`.dots__dot[data-slide="${slide}"]`)
 
-        dots.forEach(dot => dot.classList.remove('.dots__dot--active'));
-        dots.forEach(dot => dot.style.backgroundColor = '#5b5b5b')
+        dotContainer.addEventListener('click', function (e) {
+            if(e.target.classList.contains('dots__dot')) {
+                const {slide} = e.target.dataset;
+                goToSlide(slide)
+                activateDot(slide)
+            }
+        })
 
-        dotActive.classList.add('.dots__dot--active')
-        dotActive.style.backgroundColor = 'white'
-
-    };
-
-    // go to slide
-    const goToSlide = function (slide) {
-        slides.forEach( (s, i) =>
-        s.style.transform = `translateX(${100 * (i-slide)}%)`)
-    }
-
-
-    // next slide
-    const nextSlide = function () {
-        if(curSlide === maxSlide - 1) {
-            curSlide = 0;
-        } else {
-            curSlide++
-        }
-        goToSlide(curSlide);
-        activateDot(curSlide);
-    }
-
-    // previous slide
-    const prevSlide = function () {
-        if ( curSlide === 0) {
-            curSlide = maxSlide - 1;
-        } else {
-            curSlide--
-        }
-        goToSlide(curSlide)
-        activateDot(curSlide)
-    }
-
-    const init = function () {
-        goToSlide(0);
-        createDots();
-        activateDot(curSlide);
-    }
-    init();
-
-    document.addEventListener('keydown', function (e) {
-        if(e.key === 'ArrowLeft') prevSlide();
-        if(e.key === 'ArrowRight') nextSlide();
-    })
-
-    dotContainer.addEventListener('click', function (e) {
-        if(e.target.classList.contains('dots__dot')) {
-            const {slide} = e.target.dataset;
-            goToSlide(slide)
-            activateDot(slide)
-        }
-    })
-
-/*    const startRotation = setInterval(nextSlide, 3000)
-    slides.addEventListener('mouseover', function (e) {
-        clearInterval(startRotation)
-    })*/
+    /*    const startRotation = setInterval(nextSlide, 3000)
+        slides.addEventListener('mouseover', function (e) {
+            clearInterval(startRotation)
+        })*/
 }
-slider();
+
+
+let i;
+for(i = 0; i < [...slidersPerPage].length; i++) {
+    slider();
+};
 
 
 

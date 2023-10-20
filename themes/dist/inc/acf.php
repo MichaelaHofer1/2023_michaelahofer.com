@@ -166,8 +166,24 @@ if ( function_exists( 'acf_add_options_page' ) ) {
 				'post_type'       => array( 'page' ),
 				'align'           => false,
 				'mode'            => false,
-				'icon'            => 'dashicons-images-alt',
+				'icon'            => 'images-alt',
 				'render_template' => 'template-parts/blocks/block-big-gallery-with-slideshow.php',
+			) );
+		};
+
+		if ( function_exists( 'acf_register_block_type' ) ) {
+			acf_register_block_type( array(
+				'name'            => 'kleine Galerie mit Slide-Show',
+				'title'           => __( 'kleine Galerie mit Slide-Show', 'mh' ),
+				'description'     => __( 'Das ist eine kleine Galerie mit Slide-Show', 'mh' ),
+				'supports'        => array( 'anchor' => false ),
+				'category'        => 'mh',
+				'keywords'        => array( 'Galerie', 'mh', 'Slide-Show', 'Bild' ),
+				'post_type'       => array( 'page' ),
+				'align'           => false,
+				'mode'            => false,
+				'icon'            => 'images-alt',
+				'render_template' => 'template-parts/blocks/block-small-gallery-with-slideshow.php',
 			) );
 		};
 

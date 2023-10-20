@@ -82,6 +82,17 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 });
 
+
+
+
+
+
+
+
+
+
+
+
 /////////////////
 // Gallery Sliders
 const slider = function () {

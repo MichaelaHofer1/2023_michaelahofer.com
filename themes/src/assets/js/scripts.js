@@ -159,10 +159,10 @@ const slider = function () {
         }
     })
 
-    const startRotation = setInterval(nextSlide, 3000)
+/*    const startRotation = setInterval(nextSlide, 3000)
     slides.addEventListener('mouseover', function (e) {
-        clearInterval()
-    })
+        clearInterval(startRotation)
+    })*/
 }
 slider();
 

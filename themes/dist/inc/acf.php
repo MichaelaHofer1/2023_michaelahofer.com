@@ -155,6 +155,22 @@ if ( function_exists( 'acf_add_options_page' ) ) {
 			) );
 		};
 
+		if ( function_exists( 'acf_register_block_type' ) ) {
+			acf_register_block_type( array(
+				'name'            => 'große Galerie mit Slide-Show',
+				'title'           => __( 'große Galerie mit Slide-Show', 'mh' ),
+				'description'     => __( 'Das ist eine große Galerie mit Slide-Show', 'mh' ),
+				'supports'        => array( 'anchor' => false ),
+				'category'        => 'mh',
+				'keywords'        => array( 'Galerie', 'mh', 'Slide-Show', 'Bild' ),
+				'post_type'       => array( 'page' ),
+				'align'           => false,
+				'mode'            => false,
+				'icon'            => 'dashicons-images-alt',
+				'render_template' => 'template-parts/blocks/block-big-gallery-with-slideshow.php',
+			) );
+		};
+
 
 	} );
 

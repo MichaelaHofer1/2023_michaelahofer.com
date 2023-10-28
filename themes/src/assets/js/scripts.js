@@ -90,34 +90,32 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-const sliderContainer = document.querySelectorAll('.slider__gallery');
-//giving each slider on the page a numbered class
-sliderContainer.forEach(( cur, i) =>
-    cur.classList.add(`slider--${i}`)
-)
-const slidersPerPage = document.querySelectorAll('[class*="slider--"]')
-console.log([...slidersPerPage])
-
-
-
 /////////////////
 // Gallery Sliders
-const slider = function () {
+const slider = function (numberOfSlideShow) {
     const slides = document.querySelectorAll('.slide');
-    const dotContainer = document.querySelector('.dots');
+    //const dotContainer = document.querySelector('.dots');
+    const slideContainer = document.querySelector(`.slider--${numberOfSlideShow}`);
+    const slideOfOneSlider = slideContainer.querySelectorAll('.slide');
+    const dotContainer = document.querySelectorAll('.dots')
+        dotContainer.forEach(function (cur, i) {
+            cur.classList.add(`dotContainer--${i}`)
+        })
+    const currentDotContainer = document.querySelector(`.dotContainer--${numberOfSlideShow}`)
 
     let curSlide = 0
-    const maxSlide = slides.length
+    let maxSlide = slideOfOneSlider.length
 
         // creating Dots and active Dot
         const createDots = function () {
-            slides.forEach( function (_, i) {
-                dotContainer.insertAdjacentHTML('beforeend',`<button class="dots__dot" data-slide="${i}"></button>`)
-            })
+            for (let i = 0; i < maxSlide; i++) {
+                currentDotContainer.insertAdjacentHTML('beforeend',`<button class="dots__dot" data-slide="${i}"></button>`)
+            }
         }
+
         const activateDot = function (slide) {
-            const dots = document.querySelectorAll('.dots__dot')
-            const dotActive = document.querySelector(`.dots__dot[data-slide="${slide}"]`)
+            const dots = currentDotContainer.querySelectorAll('.dots__dot')
+            const dotActive = currentDotContainer.querySelector(`.dots__dot[data-slide="${slide}"]`)
 
             dots.forEach(dot => dot.classList.remove('.dots__dot--active'));
             dots.forEach(dot => dot.style.backgroundColor = '#5b5b5b')
@@ -129,13 +127,13 @@ const slider = function () {
 
         // go to slide
         const goToSlide = function (slide) {
-            slides.forEach( (s, i) =>
+            slideOfOneSlider.forEach( (s, i) =>
             s.style.transform = `translateX(${100 * (i-slide)}%)`)
         }
 
 
         // next slide
-        const nextSlide = function () {
+         const nextSlide = function () {
             if(curSlide === maxSlide - 1) {
                 curSlide = 0;
             } else {
@@ -168,7 +166,7 @@ const slider = function () {
             if(e.key === 'ArrowRight') nextSlide();
         })
 
-        dotContainer.addEventListener('click', function (e) {
+        currentDotContainer.addEventListener('click', function (e) {
             if(e.target.classList.contains('dots__dot')) {
                 const {slide} = e.target.dataset;
                 goToSlide(slide)
@@ -176,21 +174,35 @@ const slider = function () {
             }
         })
 
-    /*    const startRotation = setInterval(nextSlide, 3000)
-        slides.addEventListener('mouseover', function (e) {
-            clearInterval(startRotation)
-        })*/
+    ///// starting Slider when hovering, stopping when non-hovering
+
+    let sliderInterval;
+    const startRotation = function () {
+        if(!sliderInterval) {
+            sliderInterval = setInterval(nextSlide, 750);
+        }
+    }
+    const stopRotation = function () {
+        clearInterval(sliderInterval);
+        sliderInterval = null;
+    }
+
+
+    slideContainer.addEventListener('mouseover', startRotation)
+    slideContainer.addEventListener('mouseout', stopRotation)
+
 }
 
 
-let i;
-for(i = 0; i < [...slidersPerPage].length; i++) {
-    slider();
-};
-
-
-
-
+const sliderExists = document.querySelector('.slider__gallery') || false
+if (sliderExists) {
+    document.querySelectorAll('.slider__gallery').forEach(function (cur, i) {
+        cur.classList.add(`slider--${i}`)
+        slider(i)
+    })
+    console.log('slider exists on this page')
+} else
+    console.log('slider does not exist on this page')
 
 
 

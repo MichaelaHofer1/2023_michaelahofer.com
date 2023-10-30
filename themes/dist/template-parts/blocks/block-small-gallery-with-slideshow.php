@@ -54,6 +54,9 @@ if ( $images ): ?>
 			endif;
 			?>
 		</ul>
+        <div class="lightbox-container">
+            <div class="lightbox-toggle"></div>
+        </div>
 	</section>
 <?php endif; ?>
 

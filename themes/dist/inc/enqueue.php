@@ -10,6 +10,6 @@ add_action('wp_enqueue_scripts', function(){
 
 	wp_enqueue_script('projekt-js', get_template_directory_uri() . '/assets/js/scripts.js', [], $version, true);
 	wp_enqueue_script('splide-js', get_template_directory_uri() . '/assets/js/splide.min.js');
-    //wp_enqueue_script('projektarbeit-js-splideconfig', get_template_directory_uri() . '/assets/js/splideConfig.js');
 
+    //wp_enqueue_script('projektarbeit-js-splideconfig', get_template_directory_uri() . '/assets/js/splideConfig.js');
 });

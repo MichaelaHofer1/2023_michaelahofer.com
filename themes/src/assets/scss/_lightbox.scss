@@ -54,7 +54,8 @@
   }
 }
 
-.slide.big.delay {
+.slide.big.delay,
+.slideShow--active {
   @include topBottomRightLeft(0, 0, 0, 0);
   position: fixed;
   max-width: 70%;
@@ -92,5 +93,17 @@
       @include topBottomRightLeft(0, 0, 0, 0);
     }
   }
+}
+
+.gallery-grid > .slider__gallery.slider-big,
+.gallery-grid__small > .slider__gallery.slider-big{
+  position: fixed;
+  z-index: 1001;
+  @include topBottomRightLeft(0, 0, 0, 0);
+  width: 70%;
+  height: 80%;
+  margin: auto auto;
+  transition: width 400ms ease-in-out, height 400ms ease-in-out;
+  overflow: hidden;
 }
 

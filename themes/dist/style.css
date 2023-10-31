@@ -1127,7 +1127,8 @@ header {
   z-index: 1001;
 }
 
-.slide.big.delay {
+.slide.big.delay,
+.slideShow--active {
   top: 0;
   bottom: 0;
   left: 0;
@@ -1138,7 +1139,8 @@ header {
   margin: auto auto;
   z-index: 1001;
 }
-.slide.big.delay img {
+.slide.big.delay img,
+.slideShow--active img {
   max-height: 100%;
   max-width: 100%;
   transition: max-width 400ms ease-in-out, max-height 400ms ease-in-out;
@@ -1172,6 +1174,21 @@ header {
   bottom: 0;
   left: 0;
   right: 0;
+}
+
+.gallery-grid > .slider__gallery.slider-big,
+.gallery-grid__small > .slider__gallery.slider-big {
+  position: fixed;
+  z-index: 1001;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 70%;
+  height: 80%;
+  margin: auto auto;
+  transition: width 400ms ease-in-out, height 400ms ease-in-out;
+  overflow: hidden;
 }
 
 #footer-page {

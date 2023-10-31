@@ -95,10 +95,8 @@ const slider = function (numberOfSlideShow) {
         clearInterval(sliderInterval);
         sliderInterval = null;
     }
-/*
     const slidesNoLightbox = document.querySelector(`.slider--${numberOfSlideShow} .big`)
     console.log(slidesNoLightbox)
-*/
 
     slideContainer.addEventListener('mouseover', startRotation)
     slideContainer.addEventListener('mouseout', stopRotation)

@@ -1,7 +1,6 @@
-- Home:
-    - Teaser-Bilder klickbar -> direkt auf die Seite gelangen
++ Lightbox-Slideshow fixen
 
 
-- Galerie:
-    - Slideshow in Galerie-Grid einfügen
-    - Lightbox
+- Bildunterschrift Stil anpassen -> zwischen "" immer Fett, dann ein Absatz, dann die Beschreibung normal
+- nav-leiste beim Scrollen kleiner?
+- fade-in Animationen auf Home (Teaser Blöcke), auf Galerie einzelne Bilder?, ...

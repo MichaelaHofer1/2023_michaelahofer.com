@@ -25,7 +25,7 @@ if ( $images ): ?>
 			<?php foreach ( $images as $image_array ): ?>
                 <li class="img img--<?php echo( $counterPics ) ?>">
                     <a href="<?php echo esc_url( $image_array['url'] ); ?> ">
-                        <img src="<?php echo esc_url( $image_array['sizes']['medium'] ); ?>"
+                        <img src="<?php echo esc_url( $image_array['sizes']['large'] ); ?>"
                              alt="<?php echo esc_attr( $image_array['alt'] ); ?>"/>
                     </a>
                     <p class="img-description"><?php echo esc_html( $image_array['caption'] ); ?></p>
@@ -40,7 +40,7 @@ if ( $images ): ?>
 					foreach ( $images as $image_id ):
 						?>
                         <div class="slide slide--<?php echo( $counterSlider ) ?>">
-							<?php echo wp_get_attachment_image( $image_id, 'medium' ); ?>
+							<?php echo wp_get_attachment_image( $image_id, 'large' ); ?>
                         </div>
 						<?php
 						$counterSlider ++;

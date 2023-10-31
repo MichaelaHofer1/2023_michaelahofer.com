@@ -100,9 +100,18 @@ const slider = function (numberOfSlideShow) {
     console.log(slidesNoLightbox)
 */
 
-    slideContainer.addEventListener('mouseover', startRotation)
+
+    const lightboxContainer = document.querySelector('.lightbox-container--active');
+
+    if (lightboxContainer) {
+        slideContainer.addEventListener('mouseover', stopRotation)
+    } else {
+        slideContainer.addEventListener('mouseover', startRotation)
+    }
+
     slideContainer.addEventListener('mouseout', stopRotation)
     slideContainer.addEventListener('click', stopRotation)
+
 
     slideContainer.addEventListener('mouseover', function() {
         slideContainer.style.cursor = 'pointer'

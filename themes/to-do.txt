@@ -1,6 +1,0 @@
-+ Lightbox-Slideshow fixen
-
-
-- Bildunterschrift Stil anpassen -> zwischen "" immer Fett, dann ein Absatz, dann die Beschreibung normal
-- nav-leiste beim Scrollen kleiner?
-- fade-in Animationen auf Home (Teaser Blöcke), auf Galerie einzelne Bilder?, ...

@@ -89,7 +89,6 @@ main {
   text-align: center;
 }
 
-
 #page-headline {
   font-weight: 200;
   letter-spacing: 6px;
@@ -102,4 +101,9 @@ main {
     border-bottom: 1px solid black;
     padding-bottom: 0.1em;
   }
+}
+
+::selection {
+  color: white;
+  background-color: #3a0042;
 }

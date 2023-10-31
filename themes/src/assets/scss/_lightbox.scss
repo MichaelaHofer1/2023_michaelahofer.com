@@ -57,11 +57,7 @@
 .slide.big.delay,
 .slideShow--active {
   @include topBottomRightLeft(0, 0, 0, 0);
-  position: fixed;
-  max-width: 70%;
-  max-height: 80%;
-  margin: auto auto;
-  z-index: 1001;
+  @include lightbox;
 
   img {
     max-height: 100%;
@@ -75,11 +71,7 @@
 
   img {
     @include topBottomRightLeft(0, 0, 0, 0);
-    position: fixed;
-    max-width: 70%;
-    max-height: 80%;
-    margin: auto auto;
-    z-index: 1001;
+    @include lightbox;
     transition: max-width 400ms ease-in-out, max-height 400ms ease-in-out;
 
     &::before {
@@ -97,13 +89,12 @@
 
 .gallery-grid > .slider__gallery.slider-big,
 .gallery-grid__small > .slider__gallery.slider-big{
+  @include topBottomRightLeft(0, 0, 0, 0);
   position: fixed;
   z-index: 1001;
-  @include topBottomRightLeft(0, 0, 0, 0);
   width: 70%;
   height: 80%;
   margin: auto auto;
   transition: width 400ms ease-in-out, height 400ms ease-in-out;
-  overflow: hidden;
 }
 

@@ -68,3 +68,11 @@
     width: 100%;
   }
 }
+
+@mixin lightbox {
+  position: fixed;
+  z-index: 1001;
+  max-width: 70%;
+  max-height: 80%;
+  margin: auto auto;
+}

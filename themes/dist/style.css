@@ -107,6 +107,75 @@ main {
   padding-bottom: 0.1em;
 }
 
+::-moz-selection {
+  color: white;
+  background-color: #3a0042;
+}
+
+::selection {
+  color: white;
+  background-color: #3a0042;
+}
+
+.animate {
+  opacity: 0;
+  transition: opacity 800ms ease-in;
+}
+
+.animated {
+  opacity: 1;
+}
+.animated#page-headline, .animated.teaser-headline {
+  animation: wiggle 1s ease-in;
+}
+
+@keyframes wiggle {
+  0% {
+    transform: rotate(-9deg);
+  }
+  8% {
+    transform: rotate(8deg);
+  }
+  10% {
+    transform: rotate(-6deg);
+  }
+  12% {
+    transform: rotate(7deg);
+  }
+  14% {
+    transform: rotate(-6deg);
+  }
+  17% {
+    transform: rotate(7deg);
+  }
+  19% {
+    transform: rotate(-5deg);
+  }
+  21% {
+    transform: rotate(6deg);
+  }
+  22% {
+    transform: rotate(-4deg);
+  }
+  24% {
+    transform: rotate(5deg);
+  }
+  26% {
+    transform: rotate(-3deg);
+  }
+  28% {
+    transform: rotate(4deg);
+  }
+  30% {
+    transform: rotate(-2deg);
+  }
+  32% {
+    transform: rotate(3deg);
+  }
+  34% {
+    transform: rotate(0);
+  }
+}
 /* inter-tight-100 - latin */
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
@@ -790,8 +859,9 @@ header {
     color: #ffffff;
     transform: translateX(-100%);
     opacity: 0;
+    width: 100%;
     pointer-events: none;
-    transition: transform 200ms ease-in-out, opacity 200ms ease-in-out;
+    transition: transform 200ms ease-in-out, opacity 200ms ease-in-out, width 400ms ease-in-out;
   }
   .gallery-container .gallery-grid li,
   .gallery-container .gallery-grid__small li {
@@ -804,6 +874,25 @@ header {
     transform: translateX(0);
     pointer-events: all;
     cursor: pointer;
+  }
+  .gallery-container .gallery-grid li.big .img-description,
+  .gallery-container .gallery-grid__small li.big .img-description {
+    width: 70%;
+  }
+  .gallery-container .gallery-grid .big > .img-description,
+  .gallery-container .gallery-grid__small .big > .img-description {
+    position: fixed;
+    opacity: 1;
+    transform: translateX(0);
+    z-index: 1002;
+    height: 10%;
+    min-height: 2em;
+    width: 70%;
+    margin: auto auto 0;
+  }
+  .gallery-container .gallery-grid .big > .img-description:hover,
+  .gallery-container .gallery-grid__small .big > .img-description:hover {
+    pointer-events: none;
   }
   .gallery-container .gallery-grid .img--1 {
     grid-area: 3/1;
@@ -1134,10 +1223,10 @@ header {
   left: 0;
   right: 0;
   position: fixed;
+  z-index: 1001;
   max-width: 70%;
   max-height: 80%;
   margin: auto auto;
-  z-index: 1001;
 }
 .slide.big.delay img,
 .slideShow--active img {
@@ -1155,10 +1244,10 @@ header {
   left: 0;
   right: 0;
   position: fixed;
+  z-index: 1001;
   max-width: 70%;
   max-height: 80%;
   margin: auto auto;
-  z-index: 1001;
   transition: max-width 400ms ease-in-out, max-height 400ms ease-in-out;
 }
 .img.big img::before {
@@ -1178,17 +1267,16 @@ header {
 
 .gallery-grid > .slider__gallery.slider-big,
 .gallery-grid__small > .slider__gallery.slider-big {
-  position: fixed;
-  z-index: 1001;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
+  position: fixed;
+  z-index: 1001;
   width: 70%;
   height: 80%;
   margin: auto auto;
   transition: width 400ms ease-in-out, height 400ms ease-in-out;
-  overflow: hidden;
 }
 
 #footer-page {

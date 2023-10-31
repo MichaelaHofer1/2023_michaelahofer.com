@@ -56,8 +56,10 @@
         color: $contrast-color;
         transform: translateX(-100%);
         opacity: 0;
+        width: 100%;
         pointer-events: none;
-        transition: transform 200ms ease-in-out, opacity 200ms ease-in-out;
+        transition: transform 200ms ease-in-out, opacity 200ms ease-in-out, width 400ms ease-in-out;
+
       }
 
       li {
@@ -70,8 +72,32 @@
           pointer-events: all;
           cursor: pointer;
         }
+
       }
+
+      li.big {
+        .img-description {
+          width: 70%;
+        }
+      }
+
+      .big > .img-description {
+        position: fixed;
+        opacity: 1;
+        transform: translateX(0);
+        z-index: 1002;
+        height: 10%;
+        min-height: 2em;
+        width: 70%;
+        margin: auto auto 0;
+
+        &:hover {
+          pointer-events: none;
+        }
+        }
     }
+
+
     .gallery-grid {
       .img--1 {
         grid-area: 3/1;

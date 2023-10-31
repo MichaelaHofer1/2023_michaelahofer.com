@@ -4,7 +4,6 @@
 // Gallery Sliders
 const slider = function (numberOfSlideShow) {
     const slides = document.querySelectorAll('.slide');
-    //const dotContainer = document.querySelector('.dots');
     const slideContainer = document.querySelector(`.slider--${numberOfSlideShow}`);
     const slideOfOneSlider = slideContainer.querySelectorAll('.slide');
     const dotContainer = document.querySelectorAll('.dots')
@@ -95,8 +94,6 @@ const slider = function (numberOfSlideShow) {
         clearInterval(sliderInterval);
         sliderInterval = null;
     }
-    const slidesNoLightbox = document.querySelector(`.slider--${numberOfSlideShow} .big`)
-    console.log(slidesNoLightbox)
 
     slideContainer.addEventListener('mouseover', startRotation)
     slideContainer.addEventListener('mouseout', stopRotation)
@@ -107,7 +104,6 @@ const slider = function (numberOfSlideShow) {
     })
 
 }
-
 
 const sliderExists = document.querySelector('.slider__gallery') || false
 if (sliderExists) {

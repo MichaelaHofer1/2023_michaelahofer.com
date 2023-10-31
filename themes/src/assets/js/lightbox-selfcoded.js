@@ -4,9 +4,6 @@ const pictures = document.querySelectorAll('.img');
 const slides = document.querySelectorAll('.slide');
 const slideShowContainer = document.querySelectorAll('.slider__gallery')
 const lightboxContainer = document.querySelector('.lightbox-container');
-/*const lightboxInnerBox = document.querySelector('.lightbox');*/
-
-
 const openLightbox = function () {
     pictures.forEach((img) => {
         img.addEventListener('click', function () {
@@ -53,5 +50,3 @@ if (lightboxContainer) {
     openLightbox()
     removeLightbox()
 }
-
-

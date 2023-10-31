@@ -34,6 +34,9 @@ if( $images ): ?>
             </li>
 		<?php endforeach; ?>
 	</ul>
+    <div class="lightbox-container">
+        <div class="lightbox-toggle"></div>
+    </div>
 </section>
 <?php endif; ?>
 

@@ -1,7 +1,4 @@
 'use strict';
-import Splide from '@splidejs/splide';
-import {next} from "lodash/seq";
-
 
 const htmlTag = document.querySelector('html');
 function jsLoaded() {
@@ -22,22 +19,11 @@ toTopBtn.addEventListener('click', function() {
     document.documentElement.scrollTop = 0
 })
 
-
-
-
-
-
-
-
-
-
 import "./animate-elements"
 import "./nav"
 import "./splide-slider"
 import "./slideshow-details"
 import "./lightbox-selfcoded"
-import "./img-description-style"
-
 
 // Event Listener "DOMContentLoaded" wird nur ausgeführt, wenn der DOM fertig aufgebaut ist
 document.addEventListener('DOMContentLoaded', function () {
@@ -48,4 +34,3 @@ document.addEventListener('DOMContentLoaded', function () {
 document.addEventListener('scroll', function () {
     showToTopBtn()
 })
-

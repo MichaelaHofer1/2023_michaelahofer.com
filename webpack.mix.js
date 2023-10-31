@@ -14,7 +14,6 @@ const js_tasks = [
     {name: 'js-nav', file: './themes/src/assets/js/nav.js', dest: js_out_dir, uglify: true},
     {name: 'js-slideshow', file: './themes/src/assets/js/slideshow-details.js', dest: js_out_dir, uglify: true},
     {name: 'js-splide-slideshow', file: './themes/src/assets/js/splide-slider.js', dest: js_out_dir, uglify: true},
-    {name: 'js-variables', file: './themes/src/assets/js/variables.js', dest: js_out_dir, uglify: true},
     {name: 'js-animations', file: './themes/src/assets/js/animate-elements.js', dest: js_out_dir, uglify: true}
 ];
 

@@ -1,6 +1,5 @@
 'use strict';
 
-/////////////////
 // Gallery Sliders
 const slider = function (numberOfSlideShow) {
     const slides = document.querySelectorAll('.slide');

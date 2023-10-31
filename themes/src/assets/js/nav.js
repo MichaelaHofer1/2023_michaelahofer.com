@@ -1,8 +1,5 @@
 'use strict';
 
-/////////
-// nav Hover
-
 const navBar = document.getElementById('nav-bar');
 const navHover = function (e, opacity, transition) {
     if(e.target.classList.contains('nav__link')) {

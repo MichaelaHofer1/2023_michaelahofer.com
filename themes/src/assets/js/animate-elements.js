@@ -1,5 +1,4 @@
 'use strict';
-
 const isInViewport = function () {
     let elements = document.querySelectorAll('.animate')
     let animatedElement = 'animated'

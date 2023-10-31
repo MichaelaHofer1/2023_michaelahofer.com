@@ -25,7 +25,6 @@
             <span class="screen-reader-text"><?php _e('Navigation öffnen/schließen', 'mh'); ?></span>
         </label>
 
-
         <?php
         wp_nav_menu( array(
             'theme-location' => 'primary',

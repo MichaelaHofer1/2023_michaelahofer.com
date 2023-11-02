@@ -102,3 +102,12 @@
   opacity: 1;
   pointer-events: auto;
 }
+
+#wpforms-submit-446 {
+  background-color: white;
+  color: black;
+  transition: color 150ms ease-in-out;
+  &:hover {
+    color: black;
+  }
+}

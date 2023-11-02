@@ -253,6 +253,15 @@ main {
   pointer-events: auto;
 }
 
+#wpforms-submit-446 {
+  background-color: white;
+  color: black;
+  transition: color 150ms ease-in-out;
+}
+#wpforms-submit-446:hover {
+  color: black;
+}
+
 .list-item {
   max-width: 70%;
   margin: 0 auto;

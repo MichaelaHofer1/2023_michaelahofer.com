@@ -3,7 +3,7 @@
 Theme Name: 2023_michaelahofer
 Author: Michaela Hofer
 Description: Website Künstlerin
-Version: 1.0.0
+Version: 2.0.1
 Text Domain: mh
 */
 *,
@@ -222,12 +222,15 @@ header {
   display: flex;
   flex-direction: column;
   position: relative;
+  margin-left: 50%;
+  transform: translateX(-50%);
 }
 @media screen and (min-width: 1200px) {
   header {
     flex-direction: row;
     height: calc(100vh - 100px);
     margin: auto calc(50% - 50vw);
+    transform: translateX(0);
   }
 }
 
@@ -283,6 +286,7 @@ header {
   font-size: 2em;
   text-transform: uppercase;
   letter-spacing: 7px;
+  text-shadow: 3px 2px 5px rgba(0, 0, 0, 0.5803921569);
 }
 @media screen and (min-width: 650px) {
   #title h1 {

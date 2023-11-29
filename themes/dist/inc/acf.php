@@ -186,12 +186,4 @@ if ( function_exists( 'acf_add_options_page' ) ) {
 				'render_template' => 'template-parts/blocks/block-small-gallery-with-slideshow.php',
 			) );
 		};
-
-
 	} );
-
-
-
-
-
-?>

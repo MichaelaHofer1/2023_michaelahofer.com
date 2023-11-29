@@ -20,7 +20,6 @@ const slider = function (numberOfSlideShow) {
             currentDotContainer.insertAdjacentHTML('beforeend',`<button class="dots__dot" data-slide="${i}"></button>`)
         }
     }
-
     const activateDot = function (slide) {
         const dots = currentDotContainer.querySelectorAll('.dots__dot')
         const dotActive = currentDotContainer.querySelector(`.dots__dot[data-slide="${slide}"]`)
@@ -110,7 +109,6 @@ const slider = function (numberOfSlideShow) {
     slideContainer.addEventListener('mouseover', function() {
         slideContainer.style.cursor = 'pointer'
     })
-
 }
 
 const sliderExists = document.querySelector('.slider__gallery') || false
@@ -120,4 +118,3 @@ if (sliderExists) {
         slider(i)
     })
 }
-

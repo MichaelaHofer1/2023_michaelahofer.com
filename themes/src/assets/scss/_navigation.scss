@@ -1,7 +1,6 @@
 @use "./variables" as *;
 @use "./mixins" as *;
 
-
 #brand {
   height: calc($navbar-height-mobile / 1.5);
   width: calc($navbar-height-mobile / 1.5);
@@ -127,29 +126,3 @@
     }
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

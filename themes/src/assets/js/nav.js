@@ -2,13 +2,13 @@
 
 const navBar = document.getElementById('nav-bar');
 const navHover = function (e, opacity, transition) {
-    if(e.target.classList.contains('nav__link')) {
+    if (e.target.classList.contains('nav__link')) {
         const link = e.target;
         const sibling = link.closest('#nav-bar').querySelectorAll('.nav__link');
         const logo = link.closest('#nav-bar').querySelector('.custom-logo');
 
         sibling.forEach(el => {
-            if ( el !== link) {
+            if (el !== link) {
                 el.style.opacity = opacity;
                 el.style.transition = transition;
             }

@@ -1,7 +1,6 @@
 <?php
 get_header();
 ?>
-
     <main id="content">
         <h1 id="page-headline">
 			<?php
@@ -14,7 +13,6 @@ get_header();
 			?>
         </h1>
 		<?php
-
 		if ( have_posts() ) {
 			while ( have_posts() ) {
 				the_post();
@@ -32,7 +30,7 @@ get_header();
 							}
 							?>
                             <br>
-                            <span>(<?php the_category(', '); ?>)</span>
+                            <span>(<?php the_category( ', ' ); ?>)</span>
                         </p>
                     </div>
                     <h2 class="post-title">

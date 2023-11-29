@@ -1,8 +1,5 @@
 'use strict';
-
-// Slider with Splide-Slider
 import Splide from "@splidejs/splide";
-
 document.addEventListener('DOMContentLoaded', function () {
     const sliderInitalize = function () {
         let splide = new Splide('#slideshow-section', {

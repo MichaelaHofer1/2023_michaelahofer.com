@@ -25,7 +25,6 @@ import "./splide-slider"
 import "./slideshow-details"
 import "./lightbox-selfcoded"
 
-// Event Listener "DOMContentLoaded" wird nur ausgeführt, wenn der DOM fertig aufgebaut ist
 document.addEventListener('DOMContentLoaded', function () {
     jsLoaded()
     showToTopBtn()

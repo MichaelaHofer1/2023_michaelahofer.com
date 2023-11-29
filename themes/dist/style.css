@@ -3,7 +3,7 @@
 Theme Name: 2023_michaelahofer
 Author: Michaela Hofer
 Description: Website Künstlerin
-Version: 2.0.1
+Version: 2.0.2
 Text Domain: mh
 */
 *,
@@ -337,28 +337,6 @@ header {
   }
 }
 
-/*
-.slides {
-  height: 50vh;
-  width: 100%;
-  max-width: 2000px;
-  margin-left: auto;
-  z-index: 0;
-  filter: grayscale(100%);
-  @media screen and (min-width: $desktop-breakpoint) {
-    height: 100%;
-    width: 60%;
-  }
-
-  img {
-    object-fit: cover;
-    width: 100%;
-    height: 50vh;
-    @media screen and (min-width: $desktop-breakpoint) {
-      height: calc(100vh - 100px);
-    }
-  }
-}*/
 #nav-toggle {
   display: none;
 }
@@ -739,7 +717,7 @@ header {
   transition: color 150ms ease-in-out;
 }
 #wpforms-submit-446:hover {
-  color: black;
+  color: white;
 }
 
 .list-item {
@@ -754,18 +732,6 @@ header {
   }
 }
 
-/*
-
-#slideshow-section{
-  max-width: 500px;
-  margin: 0 auto;
-  padding: 0;
-  img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-  }
-}*/
 .slider__gallery {
   height: 530px;
   width: 530px;
@@ -1262,6 +1228,8 @@ header {
   max-height: 80%;
   margin: auto auto;
   transition: max-width 400ms ease-in-out, max-height 400ms ease-in-out;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .img.big img::before {
   content: "";

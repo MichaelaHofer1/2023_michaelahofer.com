@@ -4,27 +4,19 @@ if ( ! empty( $block['anchor'] ) ) {
 	$anchor = 'id="' . esc_attr( $block['anchor'] ) . '"';
 }
 $class_name = '';
-
 if ( ! empty( $block['className'] ) ) {
 	$class_name = 'class="' . esc_attr( $block['className'] ) . '"';
 }
-?>
-
-
-<?php
 $gallery       = get_field( 'gallery_big' );
 $counterPics   = 1;
 $counterSlider = 1;
-?>
-
-<?php
-$images = $gallery['single_pics'];
+$images        = $gallery['single_pics'];
 if ( $images ): ?>
     <section class="gallery-container <?php echo $class_name ?>">
         <ul class="gallery-grid">
 			<?php foreach ( $images as $image_array ): ?>
                 <li class="img img--<?php echo( $counterPics ) ?>">
-                    <a href="<?php echo esc_url( $image_array['url'] ); ?> ">
+                    <a>
                         <img src="<?php echo esc_url( $image_array['sizes']['large'] ); ?>"
                              alt="<?php echo esc_attr( $image_array['alt'] ); ?>"/>
                     </a>
@@ -49,7 +41,6 @@ if ( $images ): ?>
                 <div class="dots"></div>
             </li>
 			<?php if ( ! empty ( $gallery['slider_pics'] ) ) : ?>
-
 			<?php
 			endif;
 			?>

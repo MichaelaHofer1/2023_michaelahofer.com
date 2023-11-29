@@ -44,7 +44,6 @@
   }
 }
 
-
 .delay {
   img {
     position: absolute;
@@ -73,6 +72,7 @@
     @include topBottomRightLeft(0, 0, 0, 0);
     @include lightbox;
     transition: max-width 400ms ease-in-out, max-height 400ms ease-in-out;
+    object-fit: contain;
 
     &::before {
       content: "";
@@ -97,4 +97,3 @@
   margin: auto auto;
   transition: width 400ms ease-in-out, height 400ms ease-in-out;
 }
-

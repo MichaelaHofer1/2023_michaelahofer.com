@@ -1,20 +1,6 @@
 @use "./variables" as *;
 @use "./mixins" as *;
 
-/*
-
-#slideshow-section{
-  max-width: 500px;
-  margin: 0 auto;
-  padding: 0;
-  img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-  }
-}*/
-
-
 .slider__gallery {
   height: 530px;
   width: 530px;
@@ -44,7 +30,6 @@
   display: flex;
 }
 
-
 .dots__dot {
   border: none;
   background-color: $third-color;
@@ -55,7 +40,4 @@
   margin-right: 10px;
   cursor: pointer;
   transition: all 0.5s;
-
-
 }
-
